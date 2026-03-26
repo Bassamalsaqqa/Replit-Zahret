@@ -14,6 +14,7 @@ export default function Home() {
   const homeHeroFallback = `${import.meta.env.BASE_URL}images/hero-abstract.png`;
   const heroPortraitLeft = `${import.meta.env.BASE_URL}images/home/hero/hero-portrait-left.png`;
   const heroPortraitRight = `${import.meta.env.BASE_URL}images/home/hero/hero-portrait-right.png`;
+  const supportMattersImage = `${import.meta.env.BASE_URL}images/home/support/support-matters.jpg`;
 
   const programs = [
     {
@@ -281,7 +282,7 @@ export default function Home() {
               {/* smiling palestinian child learning in classroom */}
               <div className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] relative">
                  <img 
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" 
+                  src={supportMattersImage}
                   alt="Children learning" 
                   className="w-full h-full object-cover"
                 />
