@@ -192,7 +192,7 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
         </div>
-        <div className="relative z-10 w-full site-shell pb-14 pt-32">
+        <div className="relative z-10 w-full site-shell section-hero-pad">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export default function About() {
 
       {/* ── IMPACT STATS ── */}
       <div className="bg-background border-b border-border">
-        <div className="site-shell py-12">
+        <div className="site-shell section-space-tight">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {STATS.map((stat, idx) => <StatCard key={idx} stat={stat} idx={idx} />)}
           </div>
@@ -225,7 +225,7 @@ export default function About() {
       </div>
 
       {/* ── STORY ── */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="section-space bg-background">
         <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
 
@@ -307,9 +307,9 @@ export default function About() {
       </section>
 
       {/* ── VISION & MISSION ── */}
-      <section className="py-20 bg-muted/40 border-y border-border">
+      <section className="section-space bg-muted/40 border-y border-border">
         <div className="site-shell">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10 lg:mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">{t("رؤيتنا ورسالتنا", "Vision & Mission")}</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">{t("المبادئ التي تقودنا في كل خطوة نخطوها.", "The principles that guide every step we take.")}</p>
           </div>
@@ -368,10 +368,10 @@ export default function About() {
       </section>
 
       {/* ── VALUES ── */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="section-space bg-background">
         <div className="site-shell">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-10 lg:mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -410,10 +410,10 @@ export default function About() {
       </div>
 
       {/* ── TIMELINE ── */}
-      <section className="py-20 lg:py-28 bg-muted/30">
+      <section className="section-space bg-muted/30">
         <div className="site-shell">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-10 lg:mb-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -499,10 +499,10 @@ export default function About() {
       </section>
 
       {/* ── TEAM ── */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="section-space bg-background">
         <div className="site-shell">
           <motion.div
-            className="text-center mb-14"
+            className="text-center mb-10 lg:mb-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -522,7 +522,7 @@ export default function About() {
       </section>
 
       {/* ── WHERE WE WORK ── */}
-      <section className="py-20 bg-muted/30 border-y border-border">
+      <section className="section-space bg-muted/30 border-y border-border">
         <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
@@ -593,13 +593,14 @@ export default function About() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 lg:py-24 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="section-space bg-primary text-primary-foreground relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "radial-gradient(circle, white 1.5px, transparent 1.5px)", backgroundSize: "24px 24px" }}
         />
         <div className="absolute -start-20 top-0 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="site-shell">
+          <div className="section-narrow relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -634,6 +635,7 @@ export default function About() {
               </Button>
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
     </div>

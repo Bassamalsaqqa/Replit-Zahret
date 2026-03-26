@@ -115,6 +115,34 @@
     margin-inline: auto;
     padding-inline: clamp(1.5rem, 4.75vw, 4.5rem);
   }
+
+  .section-space {
+    padding-block: clamp(4.5rem, 8vw, 7rem);
+  }
+
+  .section-space-tight {
+    padding-block: clamp(3rem, 6vw, 4.75rem);
+  }
+
+  .section-hero-pad {
+    padding-top: clamp(7.5rem, 16vw, 10rem);
+    padding-bottom: clamp(4rem, 9vw, 6rem);
+  }
+
+  .section-narrow {
+    width: min(100%, 64rem);
+    margin-inline: auto;
+  }
+
+  .section-compact {
+    width: min(100%, 52rem);
+    margin-inline: auto;
+  }
+
+  .section-intro {
+    width: min(100%, 46rem);
+    margin-inline: auto;
+  }
 }
 
 /* Custom Scrollbar for elegant feel */

@@ -326,7 +326,7 @@ export default function GetInvolved() {
         {/* Gradient orb */}
         <div className="absolute top-0 end-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl z-[1]" />
 
-        <div className="relative z-10 w-full site-shell pb-14 pt-32">
+        <div className="relative z-10 w-full site-shell section-hero-pad">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -394,7 +394,7 @@ export default function GetInvolved() {
       </div>
 
       {/* ── VOLUNTEER SECTION ── */}
-      <section ref={volunteerRef} className="py-20 lg:py-28 bg-background scroll-mt-24">
+      <section ref={volunteerRef} className="section-space bg-background scroll-mt-24">
         <div className="site-shell">
 
           <div className="grid lg:grid-cols-2 gap-14 items-start mb-16">
@@ -481,12 +481,12 @@ export default function GetInvolved() {
       </section>
 
       {/* ── HOW TO JOIN ── */}
-      <section className="py-20 bg-muted/30 border-y border-border relative overflow-hidden">
+      <section className="section-space bg-muted/30 border-y border-border relative overflow-hidden">
         <div className="absolute -start-20 top-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute -end-20 bottom-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl" />
         <div className="relative site-shell">
           <motion.div
-            className="text-center mb-14"
+            className="text-center mb-10 lg:mb-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -533,10 +533,10 @@ export default function GetInvolved() {
       </section>
 
       {/* ── VOLUNTEER QUOTES ── */}
-      <section className="py-20 lg:py-24 bg-background">
+      <section className="section-space bg-background">
         <div className="site-shell">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-10 lg:mb-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -571,7 +571,7 @@ export default function GetInvolved() {
       </div>
 
       {/* ── PARTNER SECTION ── */}
-      <section ref={partnerRef} className="py-20 lg:py-28 bg-muted/20 scroll-mt-24">
+      <section ref={partnerRef} className="section-space bg-muted/20 scroll-mt-24">
         <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
@@ -647,7 +647,7 @@ export default function GetInvolved() {
       </section>
 
       {/* ── FORM + SIDEBAR ── */}
-      <section className="py-20 lg:py-24 bg-background border-t border-border">
+      <section className="section-space bg-background border-t border-border">
         <div className="site-shell">
           <div className="grid lg:grid-cols-5 gap-12">
 
@@ -795,11 +795,12 @@ export default function GetInvolved() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-16 lg:py-20 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="section-space-tight bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "radial-gradient(circle, white 1.5px, transparent 1.5px)", backgroundSize: "24px 24px" }} />
         <div className="absolute -end-24 -top-24 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="site-shell">
+          <div className="section-narrow relative text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <Sparkles className="w-10 h-10 mx-auto mb-4 text-secondary" />
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -822,6 +823,7 @@ export default function GetInvolved() {
               </Button>
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
     </div>

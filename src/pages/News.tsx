@@ -13,7 +13,7 @@ export default function News() {
   return (
     <div className="w-full flex flex-col">
       {/* ── Page header ── */}
-      <div className="bg-muted/30 py-16 lg:py-24 border-b border-border text-center relative overflow-hidden">
+      <div className="bg-muted/30 section-space-tight border-b border-border text-center relative overflow-hidden">
         {/* subtle background pattern */}
         <div
           className="absolute inset-0 opacity-5"
@@ -23,7 +23,8 @@ export default function News() {
             backgroundSize: "24px 24px",
           }}
         />
-        <div className="max-w-3xl mx-auto px-4 relative">
+        <div className="site-shell">
+          <div className="section-compact relative">
           <motion.span
             className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-secondary/10 text-secondary border border-secondary/20"
             initial={{ opacity: 0, y: -10 }}
@@ -41,7 +42,7 @@ export default function News() {
             {t("الأخبار والقصص", "News & Stories")}
           </motion.h1>
           <motion.p
-            className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -51,15 +52,16 @@ export default function News() {
               "Follow our latest field initiatives, support campaigns, community activities, and impact stories reflecting our presence and mission."
             )}
           </motion.p>
+          </div>
         </div>
       </div>
 
       {/* ── Featured article (first card — full width) ── */}
-      <div className="site-shell pt-14 pb-6 w-full">
+      <div className="site-shell section-space-tight w-full">
         {articles[0] && (
           <Link href={`/news/${articles[0].slug}`}>
             <motion.div
-              className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm border border-border/50 hover:shadow-xl transition-all duration-400 mb-10"
+              className="group relative mb-8 overflow-hidden rounded-2xl border border-border/50 shadow-sm transition-all duration-400 hover:shadow-xl lg:mb-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}

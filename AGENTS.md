@@ -39,6 +39,8 @@ This file defines working conventions for agents making changes in this reposito
 - Keep build output out of source control.
 - Prefer fixing root causes over adding exceptions or one-off workarounds.
 - Prefer centralized layout primitives for width and spacing. Wide-screen behavior should be controlled through shared shells and readable inner content widths, not one-off per-page widening.
+- Maintain a consistent spacing system across pages. Prefer shared section spacing utilities over ad hoc `py-*` values on each route.
+- Use wide outer shells plus narrower inner reading widths so pages feel comfortable on phones and expansive displays at the same time.
 
 ## Asset Organization
 
@@ -51,6 +53,7 @@ This file defines working conventions for agents making changes in this reposito
 - Reusable decorative assets can live under `public/images/shared/`.
 - Use descriptive file names such as `home-hero.jpg`, `news-cover.jpg`, or `gallery-01.jpg`.
 - Keep source images optimized before commit. Avoid oversized originals when a compressed web version is sufficient.
+- When adding many editorial assets, group them by route and slug so future content uploads stay predictable.
 
 ## Validation Checklist
 

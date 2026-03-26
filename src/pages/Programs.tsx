@@ -284,7 +284,7 @@ export default function Programs() {
         <div className="absolute inset-0 z-[1] opacity-[0.08]"
           style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
 
-        <div className="relative z-10 w-full site-shell pb-14 pt-32">
+        <div className="relative z-10 w-full site-shell section-hero-pad">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -322,11 +322,11 @@ export default function Programs() {
       </div>
 
       {/* ── FILTER TABS + GRID ── */}
-      <section className="py-16 lg:py-20 bg-background">
+      <section className="section-space-tight bg-background">
         <div className="site-shell">
 
           {/* Filter tabs */}
-          <div className="flex gap-2 flex-wrap mb-10">
+          <div className="mb-8 flex flex-wrap gap-2 lg:mb-10">
             {CATEGORIES.map(cat => (
               <button
                 key={cat.id}
@@ -430,7 +430,7 @@ export default function Programs() {
       </section>
 
       {/* ── HOW WE WORK ── */}
-      <section className="py-20 lg:py-28 relative overflow-hidden border-y border-border bg-muted/30">
+      <section className="section-space relative overflow-hidden border-y border-border bg-muted/30">
         {/* Dot grid */}
         <div className="absolute inset-0 opacity-[0.04]"
           style={{ backgroundImage: "radial-gradient(circle, currentColor 1.5px, transparent 1.5px)", backgroundSize: "28px 28px" }} />
@@ -440,7 +440,7 @@ export default function Programs() {
 
         <div className="relative site-shell">
           <motion.div
-            className="text-center mb-14"
+            className="text-center mb-10 lg:mb-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -512,7 +512,7 @@ export default function Programs() {
       </div>
 
       {/* ── FEATURED IMPACT ── */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="section-space bg-background">
         <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             {/* Text */}
@@ -601,7 +601,7 @@ export default function Programs() {
       </section>
 
       {/* ── PRINCIPLES STRIP ── */}
-      <div className="border-y border-border bg-muted/20 py-10">
+      <div className="border-y border-border bg-muted/20 section-space-tight">
         <div className="site-shell">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {[
@@ -629,12 +629,13 @@ export default function Programs() {
       </div>
 
       {/* ── CTA ── */}
-      <section className="py-20 lg:py-24 relative overflow-hidden bg-primary text-primary-foreground">
+      <section className="section-space relative overflow-hidden bg-primary text-primary-foreground">
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: "radial-gradient(circle, white 1.5px, transparent 1.5px)", backgroundSize: "24px 24px" }} />
         <div className="absolute top-0 end-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="site-shell">
+          <div className="section-narrow relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -661,6 +662,7 @@ export default function Programs() {
               </Button>
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
     </div>

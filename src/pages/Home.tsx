@@ -81,7 +81,7 @@ export default function Home() {
         </div>
 
         {/* ── Hero content – sits above the photo ── */}
-        <div className="relative z-10 w-full site-shell pb-20 pt-40">
+        <div className="relative z-10 w-full site-shell section-hero-pad">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -164,9 +164,9 @@ export default function Home() {
       </section>
 
       {/* WHO WE ARE */}
-      <section className="py-24 bg-background relative z-10">
+      <section className="section-space bg-background relative z-10">
         <div className="site-shell">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="section-intro text-center">
             <h2 className="text-3xl font-bold text-primary mb-6 flex items-center justify-center gap-3">
               <span className="w-12 h-px bg-secondary"></span>
               {t("من نحن", "Who We Are")}
@@ -183,13 +183,13 @@ export default function Home() {
       </section>
 
       {/* PROGRAMS */}
-      <section className="py-24 bg-muted/50 border-y border-border relative">
+      <section className="section-space bg-muted/50 border-y border-border relative">
         <div className="absolute inset-0 opacity-40 pointer-events-none">
           <img src={`${import.meta.env.BASE_URL}images/pattern-mesh.png`} alt="" className="w-full h-full object-cover" />
         </div>
         
         <div className="site-shell relative z-10">
-          <div className="flex justify-between items-end mb-12">
+          <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-3">{t("مجالات عملنا", "Our Program Areas")}</h2>
               <p className="text-muted-foreground max-w-2xl text-lg">
@@ -241,12 +241,12 @@ export default function Home() {
       </section>
 
       {/* WHY SUPPORT US */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="section-space relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 opacity-10 pointer-events-none">
           <img src={`${import.meta.env.BASE_URL}images/olive-branch.png`} alt="Olive Branch" className="w-full h-auto" />
         </div>
         <div className="site-shell relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-16">
             <div>
               {/* smiling palestinian child learning in classroom */}
               <div className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] relative">
@@ -287,37 +287,39 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="section-space bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <img src={`${import.meta.env.BASE_URL}images/community-hands.png`} alt="" className="w-full h-full object-cover opacity-30" />
         </div>
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            {t("ساهم معنا في بناء أثر مستدام", "Help Build Lasting Impact")}
-          </h2>
-          <p className="text-xl text-primary-foreground/80 mb-10 leading-relaxed max-w-2xl">
-            {t(
-              "ندعو الأفراد والمؤسسات والشركاء إلى دعم مبادرات تخدم المجتمع الفلسطيني بكرامة ومسؤولية واستدامة.",
-              "We invite individuals, institutions, and partners to support initiatives that serve Palestinian communities with dignity, responsibility, and sustainability."
-            )}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button 
-              size="lg" 
-              onClick={() => setLocation("/donate")}
-              className="rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-10 h-14 w-full sm:w-auto shadow-lg hover:-translate-y-1 transition-transform"
-            >
-              {t("تبرّع الآن", "Donate Now")}
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              onClick={() => setLocation("/contact")}
-              className="rounded-full bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-10 h-14 w-full sm:w-auto transition-colors"
-            >
-              {t("تواصل معنا", "Contact Us")}
-            </Button>
+        <div className="site-shell">
+          <div className="section-narrow relative z-10 flex flex-col items-center text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              {t("ساهم معنا في بناء أثر مستدام", "Help Build Lasting Impact")}
+            </h2>
+            <p className="text-xl text-primary-foreground/80 mb-10 leading-relaxed max-w-2xl">
+              {t(
+                "ندعو الأفراد والمؤسسات والشركاء إلى دعم مبادرات تخدم المجتمع الفلسطيني بكرامة ومسؤولية واستدامة.",
+                "We invite individuals, institutions, and partners to support initiatives that serve Palestinian communities with dignity, responsibility, and sustainability."
+              )}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                onClick={() => setLocation("/donate")}
+                className="rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-10 h-14 w-full sm:w-auto shadow-lg hover:-translate-y-1 transition-transform"
+              >
+                {t("تبرّع الآن", "Donate Now")}
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                onClick={() => setLocation("/contact")}
+                className="rounded-full bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-10 h-14 w-full sm:w-auto transition-colors"
+              >
+                {t("تواصل معنا", "Contact Us")}
+              </Button>
+            </div>
           </div>
         </div>
       </section>

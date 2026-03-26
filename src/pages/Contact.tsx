@@ -202,7 +202,7 @@ export default function Contact() {
     <div className="w-full flex flex-col">
 
       {/* ── HERO ── */}
-      <div className="relative bg-muted/30 py-20 lg:py-28 border-b border-border overflow-hidden">
+      <div className="relative section-space bg-muted/30 border-b border-border overflow-hidden">
         {/* Dot grid pattern */}
         <div
           className="absolute inset-0 opacity-[0.045]"
@@ -215,7 +215,8 @@ export default function Contact() {
         <div className="absolute -top-24 -end-24 w-72 h-72 rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute -bottom-16 -start-16 w-56 h-56 rounded-full bg-secondary/20 blur-3xl" />
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="site-shell">
+          <div className="section-narrow relative text-center">
           <motion.span
             className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-secondary/15 text-secondary border border-secondary/25"
             initial={{ opacity: 0, y: -10 }}
@@ -233,7 +234,7 @@ export default function Contact() {
             {t("نحن هنا من أجلكم", "We Are Here for You")}
           </motion.h1>
           <motion.p
-            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.12 }}
@@ -243,12 +244,13 @@ export default function Contact() {
               "Visit us or reach out through any of the following channels. We aim to respond within 24 business hours."
             )}
           </motion.p>
+          </div>
         </div>
       </div>
 
       {/* ── QUICK INFO CARDS ── */}
       <div className="border-b border-border bg-background">
-        <div className="site-shell py-10">
+        <div className="site-shell section-space-tight">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {INFO_CARDS.map((card, idx) => (
               <motion.div
@@ -288,7 +290,7 @@ export default function Contact() {
       </div>
 
       {/* ── FORM + SIDEBAR ── */}
-      <div className="site-shell py-16 lg:py-20 w-full">
+      <div className="site-shell section-space-tight w-full">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14">
 
           {/* ── Sidebar ── */}
@@ -485,7 +487,7 @@ export default function Contact() {
 
       {/* ── MAP ── */}
       <div className="border-t border-border bg-muted/20">
-        <div className="site-shell py-12">
+        <div className="site-shell section-space-tight">
           <div className="mb-6 flex items-end justify-between gap-4">
             <div>
               <h2 className="text-2xl font-bold text-foreground">
@@ -547,8 +549,9 @@ export default function Contact() {
             backgroundSize: "28px 28px",
           }}
         />
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-          <div className="text-center mb-10">
+        <div className="site-shell section-space-tight">
+          <div className="section-compact">
+          <div className="text-center mb-8 lg:mb-10">
             <span className="inline-block mb-3 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-secondary/10 text-secondary border border-secondary/20">
               {t("الأسئلة الشائعة", "FAQ")}
             </span>
@@ -577,7 +580,7 @@ export default function Contact() {
 
           {/* CTA below FAQ */}
           <motion.div
-            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -594,6 +597,7 @@ export default function Contact() {
               </Button>
             </Link>
           </motion.div>
+          </div>
         </div>
       </div>
     </div>

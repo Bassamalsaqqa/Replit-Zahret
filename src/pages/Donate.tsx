@@ -25,9 +25,10 @@ export default function Donate() {
   };
 
   return (
-    <div className="w-full bg-muted/20 min-h-[80vh] py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+    <div className="w-full min-h-[80vh] bg-muted/20 section-space-tight">
+      <div className="site-shell">
+        <div className="section-narrow">
+        <div className="text-center mb-10 lg:mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
             <Heart className="w-8 h-8 fill-current" />
           </div>
@@ -129,6 +130,7 @@ export default function Donate() {
             </Button>
             
           </form>
+        </div>
         </div>
       </div>
     </div>
