@@ -111,9 +111,9 @@
 @layer components {
   .site-shell {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1560px;
     margin-inline: auto;
-    padding-inline: clamp(1rem, 2.5vw, 4rem);
+    padding-inline: clamp(1.25rem, 4vw, 4rem);
   }
 }
 
