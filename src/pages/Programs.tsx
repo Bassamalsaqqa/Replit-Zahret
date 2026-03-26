@@ -257,6 +257,7 @@ export default function Programs() {
   const [, setLocation] = useLocation();
   const isRtl = language === "ar";
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
+  const programsHeroImage = `${import.meta.env.BASE_URL}images/programs/hero/programs-hero.jpg`;
 
   const [activeFilter, setActiveFilter] = useState("all");
   const [selected, setSelected] = useState<string | null>(null);
@@ -271,7 +272,7 @@ export default function Programs() {
       <div className="relative min-h-[62vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1400&q=80"
+            src={programsHeroImage}
             alt=""
             aria-hidden
             className="w-full h-full object-cover object-top"
