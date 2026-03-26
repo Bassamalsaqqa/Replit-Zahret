@@ -180,10 +180,10 @@ const PARTNER_TYPES = [
 ];
 
 const GALLERY_PHOTOS = [
-  "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80",
-  "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&q=80",
-  "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
-  "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&q=80",
+  `${import.meta.env.BASE_URL}images/get-involved/gallery/get-involved-gallery-01.jpg`,
+  `${import.meta.env.BASE_URL}images/get-involved/gallery/get-involved-gallery-02.jpg`,
+  `${import.meta.env.BASE_URL}images/get-involved/gallery/get-involved-gallery-03.jpg`,
+  `${import.meta.env.BASE_URL}images/get-involved/gallery/get-involved-gallery-04.jpg`,
 ];
 
 const CONTRIBUTION_AREAS_AR = [
