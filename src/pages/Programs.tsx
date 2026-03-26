@@ -165,11 +165,11 @@ const HOW_WE_WORK = [
 ];
 
 const GALLERY = [
-  "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&q=80",
-  "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
-  "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80",
-  "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&q=80",
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+  `${import.meta.env.BASE_URL}images/programs/gallery/programs-gallery-01.jpg`,
+  `${import.meta.env.BASE_URL}images/programs/gallery/programs-gallery-02.jpg`,
+  `${import.meta.env.BASE_URL}images/programs/gallery/programs-gallery-03.jpg`,
+  `${import.meta.env.BASE_URL}images/programs/gallery/programs-gallery-04.jpg`,
+  `${import.meta.env.BASE_URL}images/programs/gallery/programs-gallery-05.jpg`,
 ];
 
 const CATEGORIES = [
