@@ -326,7 +326,7 @@ export default function GetInvolved() {
         {/* Gradient orb */}
         <div className="absolute top-0 end-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl z-[1]" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 pt-32">
+        <div className="relative z-10 w-full site-shell pb-14 pt-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -352,7 +352,7 @@ export default function GetInvolved() {
 
       {/* ── THREE PATHS ── */}
       <div className="bg-background py-14 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid sm:grid-cols-3 gap-5">
             {PATHS.map((path, idx) => (
               <motion.button
@@ -395,7 +395,7 @@ export default function GetInvolved() {
 
       {/* ── VOLUNTEER SECTION ── */}
       <section ref={volunteerRef} className="py-20 lg:py-28 bg-background scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
 
           <div className="grid lg:grid-cols-2 gap-14 items-start mb-16">
             {/* Left: text */}
@@ -484,7 +484,7 @@ export default function GetInvolved() {
       <section className="py-20 bg-muted/30 border-y border-border relative overflow-hidden">
         <div className="absolute -start-20 top-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute -end-20 bottom-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative site-shell">
           <motion.div
             className="text-center mb-14"
             initial={{ opacity: 0 }}
@@ -534,7 +534,7 @@ export default function GetInvolved() {
 
       {/* ── VOLUNTEER QUOTES ── */}
       <section className="py-20 lg:py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0 }}
@@ -572,7 +572,7 @@ export default function GetInvolved() {
 
       {/* ── PARTNER SECTION ── */}
       <section ref={partnerRef} className="py-20 lg:py-28 bg-muted/20 scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
@@ -648,7 +648,7 @@ export default function GetInvolved() {
 
       {/* ── FORM + SIDEBAR ── */}
       <section className="py-20 lg:py-24 bg-background border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-5 gap-12">
 
             {/* Sidebar */}

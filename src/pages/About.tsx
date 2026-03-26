@@ -192,7 +192,7 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
         </div>
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 pt-32">
+        <div className="relative z-10 w-full site-shell pb-14 pt-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export default function About() {
 
       {/* ── IMPACT STATS ── */}
       <div className="bg-background border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="site-shell py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {STATS.map((stat, idx) => <StatCard key={idx} stat={stat} idx={idx} />)}
           </div>
@@ -226,7 +226,7 @@ export default function About() {
 
       {/* ── STORY ── */}
       <section className="py-20 lg:py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
 
             {/* Images stacked with offset */}
@@ -308,7 +308,7 @@ export default function About() {
 
       {/* ── VISION & MISSION ── */}
       <section className="py-20 bg-muted/40 border-y border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">{t("رؤيتنا ورسالتنا", "Vision & Mission")}</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">{t("المبادئ التي تقودنا في كل خطوة نخطوها.", "The principles that guide every step we take.")}</p>
@@ -369,7 +369,7 @@ export default function About() {
 
       {/* ── VALUES ── */}
       <section className="py-20 lg:py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -411,7 +411,7 @@ export default function About() {
 
       {/* ── TIMELINE ── */}
       <section className="py-20 lg:py-28 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0 }}
@@ -500,7 +500,7 @@ export default function About() {
 
       {/* ── TEAM ── */}
       <section className="py-20 lg:py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <motion.div
             className="text-center mb-14"
             initial={{ opacity: 0 }}
@@ -523,7 +523,7 @@ export default function About() {
 
       {/* ── WHERE WE WORK ── */}
       <section className="py-20 bg-muted/30 border-y border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: isRtl ? 30 : -30 }}

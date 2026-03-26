@@ -248,7 +248,7 @@ export default function Contact() {
 
       {/* ── QUICK INFO CARDS ── */}
       <div className="border-b border-border bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="site-shell py-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {INFO_CARDS.map((card, idx) => (
               <motion.div
@@ -288,7 +288,7 @@ export default function Contact() {
       </div>
 
       {/* ── FORM + SIDEBAR ── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 w-full">
+      <div className="site-shell py-16 lg:py-20 w-full">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14">
 
           {/* ── Sidebar ── */}
@@ -485,7 +485,7 @@ export default function Contact() {
 
       {/* ── MAP ── */}
       <div className="border-t border-border bg-muted/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="site-shell py-12">
           <div className="mb-6 flex items-end justify-between gap-4">
             <div>
               <h2 className="text-2xl font-bold text-foreground">

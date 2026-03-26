@@ -284,7 +284,7 @@ export default function Programs() {
         <div className="absolute inset-0 z-[1] opacity-[0.08]"
           style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 pt-32">
+        <div className="relative z-10 w-full site-shell pb-14 pt-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -323,7 +323,7 @@ export default function Programs() {
 
       {/* ── FILTER TABS + GRID ── */}
       <section className="py-16 lg:py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
 
           {/* Filter tabs */}
           <div className="flex gap-2 flex-wrap mb-10">
@@ -438,7 +438,7 @@ export default function Programs() {
         <div className="absolute -top-20 -start-20 w-72 h-72 rounded-full bg-primary/15 blur-3xl" />
         <div className="absolute -bottom-20 -end-20 w-72 h-72 rounded-full bg-secondary/15 blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative site-shell">
           <motion.div
             className="text-center mb-14"
             initial={{ opacity: 0 }}
@@ -513,7 +513,7 @@ export default function Programs() {
 
       {/* ── FEATURED IMPACT ── */}
       <section className="py-20 lg:py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             {/* Text */}
             <motion.div
@@ -602,7 +602,7 @@ export default function Programs() {
 
       {/* ── PRINCIPLES STRIP ── */}
       <div className="border-y border-border bg-muted/20 py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {[
               { icon: CheckCircle, ar: "الكرامة أولاً", en: "Dignity First" },

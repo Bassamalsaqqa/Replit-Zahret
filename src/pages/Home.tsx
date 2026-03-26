@@ -10,6 +10,8 @@ export default function Home() {
   const { t, language } = useLanguage();
   const [, setLocation] = useLocation();
   const ArrowIcon = language === "ar" ? ArrowLeft : ArrowRight;
+  const homeHeroImage = `${import.meta.env.BASE_URL}images/home/hero/home-hero.jpg`;
+  const homeHeroFallback = `${import.meta.env.BASE_URL}images/hero-abstract.png`;
 
   const programs = [
     {
@@ -63,10 +65,14 @@ export default function Home() {
         {/* ── Full-bleed background photo ── */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://pixabay.com/get/gf54d2b99c5216f536725e43a57a56c83b21eab2adfa7c3facc1e558bd8c40030e8359d73f107ac30ee704bafe5344ad449322203721a4b9a6b8262b8cd095db4_1280.jpg"
+            src={homeHeroImage}
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover object-center"
+            onError={(event) => {
+              event.currentTarget.onerror = null;
+              event.currentTarget.src = homeHeroFallback;
+            }}
           />
           {/* Dark gradient – heavier at bottom where text sits, lighter at top */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
@@ -75,7 +81,7 @@ export default function Home() {
         </div>
 
         {/* ── Hero content – sits above the photo ── */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40">
+        <div className="relative z-10 w-full site-shell pb-20 pt-40">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -159,7 +165,7 @@ export default function Home() {
 
       {/* WHO WE ARE */}
       <section className="py-24 bg-background relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-primary mb-6 flex items-center justify-center gap-3">
               <span className="w-12 h-px bg-secondary"></span>
@@ -182,7 +188,7 @@ export default function Home() {
           <img src={`${import.meta.env.BASE_URL}images/pattern-mesh.png`} alt="" className="w-full h-full object-cover" />
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-3">{t("مجالات عملنا", "Our Program Areas")}</h2>
@@ -239,7 +245,7 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-1/3 opacity-10 pointer-events-none">
           <img src={`${import.meta.env.BASE_URL}images/olive-branch.png`} alt="Olive Branch" className="w-full h-auto" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               {/* smiling palestinian child learning in classroom */}

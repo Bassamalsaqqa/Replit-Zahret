@@ -45,7 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       >
         {/* Decorative top bar — now inside the fixed header */}
         <div className="h-1.5 w-full bg-gradient-to-r from-primary via-secondary to-primary flex-shrink-0" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group cursor-pointer">
@@ -184,7 +184,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
             
             {/* Column 1: Brand */}

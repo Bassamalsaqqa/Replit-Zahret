@@ -55,7 +55,7 @@ export default function News() {
       </div>
 
       {/* ── Featured article (first card — full width) ── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-6 w-full">
+      <div className="site-shell pt-14 pb-6 w-full">
         {articles[0] && (
           <Link href={`/news/${articles[0].slug}`}>
             <motion.div
