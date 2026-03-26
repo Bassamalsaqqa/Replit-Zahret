@@ -134,18 +134,18 @@ export const articles: Article[] = [
     readingTimeAr: "٣ دقائق قراءة",
     readingTimeEn: "3 min read",
     mainPhoto: {
-      src: "https://images.unsplash.com/photo-1542810634-71277d95dc8c?w=1400&q=85",
+      src: `${import.meta.env.BASE_URL}images/news/regional-engagement-partnerships-2023/main-photo.jpg`,
       captionAr: "ممثلو الجمعية في لقاء إقليمي جمع عددًا من المنظمات المجتمعية الشريكة",
       captionEn: "Association representatives at a regional gathering bringing together partner community organizations",
     },
     secondaryPhotos: [
       {
-        src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+        src: `${import.meta.env.BASE_URL}images/news/regional-engagement-partnerships-2023/support-photo-01.jpg`,
         captionAr: "جلسة حوارية مفتوحة حول التجارب المجتمعية المشتركة",
         captionEn: "An open dialogue session on shared community experiences",
       },
       {
-        src: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80",
+        src: `${import.meta.env.BASE_URL}images/news/regional-engagement-partnerships-2023/support-photo-02.jpg`,
         captionAr: "توقيع مذكرة تفاهم مع إحدى المنظمات الشريكة لتوسيع التعاون",
         captionEn: "Signing a memorandum of understanding with a partner organization to expand cooperation",
       },
