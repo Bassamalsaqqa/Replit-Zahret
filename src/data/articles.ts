@@ -83,7 +83,7 @@ export const articles: Article[] = [
     readingTimeAr: "٥ دقائق قراءة",
     readingTimeEn: "5 min read",
     mainPhoto: {
-      src: "https://images.unsplash.com/photo-1593113514676-47b2c019a3b3?w=1400&q=85",
+      src: `${import.meta.env.BASE_URL}images/news/community-initiative-vulnerable-families-2023/main-photo.jpg`,
       captionAr: "فريق الجمعية خلال جولة ميدانية لتوزيع الدعم الغذائي على الأسر المستفيدة",
       captionEn: "The association's team during a field round distributing food support to beneficiary families",
     },
