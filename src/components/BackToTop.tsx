@@ -78,11 +78,8 @@ export function BackToTop() {
               height={BTN}
               viewBox={`0 0 ${BTN} ${BTN}`}
               aria-hidden="true"
-              className="pointer-events-none"
+              className="pointer-events-none absolute inset-0 block"
               style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
                 transform: "rotate(-90deg)",   /* progress starts at 12 o'clock */
               }}
             >
@@ -118,8 +115,9 @@ export function BackToTop() {
               style={{
                 width:  DISC,
                 height: DISC,
-                inset: 0,
-                margin: "auto",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
               }}
             >
               <ArrowUp
