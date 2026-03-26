@@ -98,17 +98,14 @@ function StatCard({ stat, idx }: { stat: typeof STATS[0]; idx: number }) {
 /* ─── Value Card ─────────────────────────────────────────────── */
 function ValueCard({ val, idx }: { val: typeof VALUES[0]; idx: number }) {
   const { t } = useLanguage();
-  const [hovered, setHovered] = useState(false);
 
   return (
     <motion.div
-      className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 cursor-default min-h-[160px] flex flex-col justify-between hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+      className="group relative flex min-h-[190px] cursor-default flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ delay: idx * 0.07, duration: 0.4 }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
       {/* Gradient fill on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -117,24 +114,13 @@ function ValueCard({ val, idx }: { val: typeof VALUES[0]; idx: number }) {
         <div className="w-10 h-10 rounded-xl bg-primary/10 group-hover:bg-primary text-primary group-hover:text-primary-foreground flex items-center justify-center transition-all duration-300 flex-shrink-0">
           <val.icon className="w-5 h-5" />
         </div>
-        <div>
+        <div className="space-y-3">
           <p className="font-bold text-foreground text-base">{t(val.ar, val.en)}</p>
+          <p className="text-sm leading-relaxed text-muted-foreground transition-colors duration-300 group-hover:text-foreground/80">
+            {t(val.descAr, val.descEn)}
+          </p>
         </div>
       </div>
-
-      <AnimatePresence>
-        {hovered && (
-          <motion.p
-            className="relative text-sm text-muted-foreground leading-relaxed mt-3"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 4 }}
-            transition={{ duration: 0.2 }}
-          >
-            {t(val.descAr, val.descEn)}
-          </motion.p>
-        )}
-      </AnimatePresence>
     </motion.div>
   );
 }
@@ -380,7 +366,7 @@ export default function About() {
               {t("ما يميّزنا", "What Defines Us")}
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">{t("قيمنا الأساسية", "Our Core Values")}</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">{t("مرّر فوق القيمة لمعرفة المزيد.", "Hover over a value to learn more.")}</p>
+            <p className="text-muted-foreground max-w-xl mx-auto">{t("تظهر القيم بوضوح، ويضيف المرور عليها لمسة تفاعلية خفيفة.", "The values are visible by default, with hover adding a light interactive accent.")}</p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {VALUES.map((val, idx) => <ValueCard key={idx} val={val} idx={idx} />)}
