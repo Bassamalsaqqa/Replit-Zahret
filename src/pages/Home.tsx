@@ -85,12 +85,12 @@ export default function Home() {
         {/* ── Hero content – sits above the photo ── */}
         <div className="pointer-events-none absolute inset-0 z-[1] hidden lg:block" aria-hidden="true">
           <div className="absolute left-8 top-28 xl:left-14 xl:top-32">
-            <div className="flex h-36 w-36 items-center justify-center rounded-full border border-white/14 bg-white/6 shadow-[0_18px_48px_rgba(0,0,0,0.28)] backdrop-blur-[2px] xl:h-44 xl:w-44">
-              <div className="flex h-[82%] w-[82%] items-center justify-center rounded-full border border-white/12 bg-black/10">
+            <div className="flex h-44 w-44 items-center justify-center rounded-full border border-white/14 bg-white/6 shadow-[0_18px_48px_rgba(0,0,0,0.28)] backdrop-blur-[2px] overflow-hidden">
+              <div className="flex h-[82%] w-[82%] items-center justify-center rounded-full border border-white/12 bg-black/10 overflow-hidden">
                 <img
                   src={heroPortraitLeft}
                   alt=""
-                  className="h-[78%] w-[78%] object-contain drop-shadow-[0_10px_22px_rgba(0,0,0,0.42)]"
+                  className="h-full w-full object-cover object-top drop-shadow-[0_10px_22px_rgba(0,0,0,0.42)] scale-[1.08]"
                   decoding="async"
                 />
               </div>
@@ -98,12 +98,12 @@ export default function Home() {
           </div>
 
           <div className="absolute right-8 top-24 xl:right-14 xl:top-28">
-            <div className="flex h-44 w-44 items-center justify-center rounded-full border border-white/16 bg-white/8 shadow-[0_22px_56px_rgba(0,0,0,0.34)] backdrop-blur-[2px] xl:h-52 xl:w-52">
-              <div className="flex h-[82%] w-[82%] items-center justify-center rounded-full border border-white/14 bg-black/10">
+            <div className="flex h-44 w-44 items-center justify-center rounded-full border border-white/16 bg-white/8 shadow-[0_22px_56px_rgba(0,0,0,0.34)] backdrop-blur-[2px] overflow-hidden">
+              <div className="flex h-[82%] w-[82%] items-center justify-center rounded-full border border-white/14 bg-black/10 overflow-hidden">
                 <img
                   src={heroPortraitRight}
                   alt=""
-                  className="h-[80%] w-[80%] object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.45)]"
+                  className="h-full w-full object-cover object-top drop-shadow-[0_12px_24px_rgba(0,0,0,0.45)] scale-[1.12]"
                   decoding="async"
                 />
               </div>
