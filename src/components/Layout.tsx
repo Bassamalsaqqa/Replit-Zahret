@@ -50,12 +50,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group cursor-pointer">
-              <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-primary/20 bg-background/80 shadow-md transition-transform duration-300 group-hover:scale-105">
+              <div className="flex h-11 w-11 items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
                 <img
                   src={brandIcon}
                   alt=""
                   aria-hidden="true"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <div className="flex flex-col">
@@ -196,12 +196,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {/* Column 1: Brand */}
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-background/15 bg-background shadow-md">
+                <div className="flex h-11 w-11 items-center justify-center overflow-hidden">
                   <img
                     src={brandIcon}
                     alt=""
                     aria-hidden="true"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                   />
                 </div>
                 <span className="font-bold text-xl">
