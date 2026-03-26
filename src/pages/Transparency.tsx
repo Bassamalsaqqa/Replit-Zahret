@@ -4,6 +4,7 @@ import { FileText, ShieldCheck, Scale, Globe } from "lucide-react";
 
 export default function Transparency() {
   const { t } = useLanguage();
+  const transparencyHeroImage = `${import.meta.env.BASE_URL}images/transparency/hero/transparency-hero.jpg`;
 
   const sections = [
     {
@@ -39,8 +40,12 @@ export default function Transparency() {
   return (
     <div className="w-full flex flex-col">
       <div className="bg-primary text-primary-foreground py-16 lg:py-24 text-center relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={transparencyHeroImage} alt="" aria-hidden="true" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-primary/70" />
         <div className="absolute inset-0 opacity-10 pointer-events-none">
-           <img src={`${import.meta.env.BASE_URL}images/pattern-mesh.png`} alt="" className="w-full h-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/pattern-mesh.png`} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="max-w-3xl mx-auto px-4 relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">

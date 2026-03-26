@@ -188,6 +188,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [openFaq, setOpenFaq] = useState<string | null>(null);
+  const [isMapInteractive, setIsMapInteractive] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -508,16 +509,34 @@ export default function Contact() {
             </a>
           </div>
 
-          <div className="rounded-2xl overflow-hidden border border-border shadow-md" style={{ height: "420px" }}>
+          <div className="relative rounded-2xl overflow-hidden border border-border shadow-md" style={{ height: "420px" }}>
             <iframe
               title={t("خريطة الموقع", "Location Map")}
               src="https://www.openstreetmap.org/export/embed.html?bbox=35.1734%2C31.8738%2C35.2334%2C31.9338&layer=mapnik&marker=31.9038%2C35.2034"
               width="100%"
               height="420"
-              style={{ border: 0, display: "block" }}
+              style={{ border: 0, display: "block", pointerEvents: isMapInteractive ? "auto" : "none" }}
               loading="lazy"
               allowFullScreen
             />
+            {!isMapInteractive && (
+              <button
+                type="button"
+                onClick={() => setIsMapInteractive(true)}
+                className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-background/35 px-6 text-center backdrop-blur-[1.5px]"
+                aria-label={t("تفعيل الخريطة", "Activate map")}
+              >
+                <div className="rounded-full border border-border/70 bg-background/90 px-4 py-2 text-sm font-semibold text-foreground shadow-sm">
+                  {t("اضغط لتفعيل الخريطة", "Click to activate map")}
+                </div>
+                <p className="max-w-sm text-sm text-foreground/80">
+                  {t(
+                    "لتسهيل التمرير في الصفحة، تبقى الخريطة غير تفاعلية حتى تقوم بتفعيلها.",
+                    "To keep page scrolling smooth, the map stays inactive until you activate it."
+                  )}
+                </p>
+              </button>
+            )}
           </div>
 
           {/* Office location chips below map */}
