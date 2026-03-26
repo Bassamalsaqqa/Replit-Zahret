@@ -12,6 +12,8 @@ export default function Home() {
   const ArrowIcon = language === "ar" ? ArrowLeft : ArrowRight;
   const homeHeroImage = `${import.meta.env.BASE_URL}images/home/hero/home-hero.jpg`;
   const homeHeroFallback = `${import.meta.env.BASE_URL}images/hero-abstract.png`;
+  const heroPortraitLeft = `${import.meta.env.BASE_URL}images/home/hero/hero-portrait-left.png`;
+  const heroPortraitRight = `${import.meta.env.BASE_URL}images/home/hero/hero-portrait-right.png`;
 
   const programs = [
     {
@@ -81,12 +83,40 @@ export default function Home() {
         </div>
 
         {/* ── Hero content – sits above the photo ── */}
+        <div className="pointer-events-none absolute inset-0 z-[1] hidden lg:block" aria-hidden="true">
+          <div className="absolute inset-y-0 start-0 w-[24vw] min-w-[13rem] max-w-[21rem] overflow-hidden">
+            <div className="absolute inset-x-0 bottom-0 top-20">
+              <img
+                src={heroPortraitLeft}
+                alt=""
+                className="h-full w-full object-contain object-bottom opacity-70 drop-shadow-[0_18px_35px_rgba(0,0,0,0.4)] xl:opacity-80"
+                decoding="async"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/15 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black/65 to-transparent" />
+          </div>
+
+          <div className="absolute inset-y-0 end-0 w-[32vw] min-w-[18rem] max-w-[30rem] overflow-hidden">
+            <div className="absolute inset-x-0 bottom-0 top-10">
+              <img
+                src={heroPortraitRight}
+                alt=""
+                className="h-full w-full object-contain object-bottom opacity-80 drop-shadow-[0_22px_40px_rgba(0,0,0,0.48)] xl:opacity-90"
+                decoding="async"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-l from-black/45 via-black/15 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/70 to-transparent" />
+          </div>
+        </div>
+
         <div className="relative z-10 w-full site-shell section-hero-pad">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: "easeOut" }}
-            className="flex flex-col gap-6 max-w-3xl"
+            className="flex max-w-3xl flex-col gap-6 xl:max-w-[46rem]"
           >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white border border-white/20 w-fit backdrop-blur-md">
