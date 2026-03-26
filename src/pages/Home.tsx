@@ -84,7 +84,7 @@ export default function Home() {
 
         {/* ── Hero content – sits above the photo ── */}
         <div className="pointer-events-none absolute inset-0 z-[1] hidden lg:block" aria-hidden="true">
-          <div className="absolute left-8 top-28 xl:left-14 xl:top-32">
+          <div className="absolute left-8 top-22 xl:left-14 xl:top-26">
             <div className="flex h-44 w-44 items-center justify-center rounded-full border border-white/14 bg-white/6 shadow-[0_18px_48px_rgba(0,0,0,0.28)] backdrop-blur-[2px] overflow-hidden">
               <div className="flex h-[82%] w-[82%] items-center justify-center rounded-full border border-white/12 bg-black/10 overflow-hidden">
                 <img
@@ -97,7 +97,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute right-8 top-28 xl:right-14 xl:top-32">
+          <div className="absolute right-8 top-22 xl:right-14 xl:top-26">
             <div className="flex h-44 w-44 items-center justify-center rounded-full border border-white/16 bg-white/8 shadow-[0_22px_56px_rgba(0,0,0,0.34)] backdrop-blur-[2px] overflow-hidden">
               <div className="flex h-[82%] w-[82%] items-center justify-center rounded-full border border-white/14 bg-black/10 overflow-hidden">
                 <img
