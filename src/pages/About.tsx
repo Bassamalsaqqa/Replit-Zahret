@@ -164,6 +164,12 @@ export default function About() {
   const [activeTimeline, setActiveTimeline] = useState(0);
   const aboutStoryMainImage = `${import.meta.env.BASE_URL}images/about/story/about-story-main.jpg`;
   const aboutStoryInsetImage = `${import.meta.env.BASE_URL}images/about/story/about-story-inset.jpg`;
+  const aboutGalleryImages = [
+    `${import.meta.env.BASE_URL}images/about/gallery/about-gallery-01.jpg`,
+    `${import.meta.env.BASE_URL}images/about/gallery/about-gallery-02.jpg`,
+    `${import.meta.env.BASE_URL}images/about/gallery/about-gallery-03.jpg`,
+    `${import.meta.env.BASE_URL}images/about/gallery/about-gallery-04.jpg`,
+  ];
 
   return (
     <div className="w-full flex flex-col">
@@ -379,12 +385,7 @@ export default function About() {
       {/* ── PHOTO STRIP ── */}
       <div className="overflow-hidden border-y border-border">
         <div className="flex gap-0">
-          {[
-            "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80",
-            "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&q=80",
-            "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
-            "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&q=80",
-          ].map((src, i) => (
+          {aboutGalleryImages.map((src, i) => (
             <div key={i} className="flex-1 overflow-hidden h-48 sm:h-64 group">
               <img
                 src={src}
