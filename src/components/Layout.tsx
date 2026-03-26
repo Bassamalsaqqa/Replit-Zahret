@@ -10,6 +10,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const { language, setLanguage, t } = useLanguage();
   const [location, setLocation] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const brandIcon = `${import.meta.env.BASE_URL}icons/site-icon.png`;
 
   const orgNameAr = "جمعية زهرة المدائن";
   const orgNameEn = "Zahrat Al-Madain";
@@ -49,8 +50,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group cursor-pointer">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground shadow-md group-hover:scale-105 transition-transform duration-300">
-                <Heart className="w-5 h-5" />
+              <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-primary/20 bg-background/80 shadow-md transition-transform duration-300 group-hover:scale-105">
+                <img
+                  src={brandIcon}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight text-foreground">
@@ -190,8 +196,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {/* Column 1: Brand */}
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-primary shadow-md">
-                  <Heart className="w-5 h-5" />
+                <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-background/15 bg-background shadow-md">
+                  <img
+                    src={brandIcon}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
                 <span className="font-bold text-xl">
                   {t(orgNameAr, orgNameEn)}
