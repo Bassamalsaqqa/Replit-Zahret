@@ -162,6 +162,8 @@ export default function About() {
   const isRtl = language === "ar";
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
   const [activeTimeline, setActiveTimeline] = useState(0);
+  const aboutStoryMainImage = `${import.meta.env.BASE_URL}images/about/story/about-story-main.jpg`;
+  const aboutStoryInsetImage = `${import.meta.env.BASE_URL}images/about/story/about-story-inset.jpg`;
 
   return (
     <div className="w-full flex flex-col">
@@ -227,7 +229,7 @@ export default function About() {
                 {/* Main image */}
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl group">
                   <img
-                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80"
+                    src={aboutStoryMainImage}
                     alt={t("أطفال في الفصل الدراسي", "Children in classroom")}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -236,7 +238,7 @@ export default function About() {
                 {/* Inset second image */}
                 <div className="absolute -bottom-6 -end-6 w-40 sm:w-52 rounded-2xl overflow-hidden shadow-2xl border-4 border-background group">
                   <img
-                    src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=400&q=80"
+                    src={aboutStoryInsetImage}
                     alt={t("مجتمع", "Community")}
                     className="w-full h-full object-cover aspect-square group-hover:scale-110 transition-transform duration-700"
                   />
