@@ -97,7 +97,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute right-8 top-24 xl:right-14 xl:top-28">
+          <div className="absolute right-8 top-28 xl:right-14 xl:top-32">
             <div className="flex h-44 w-44 items-center justify-center rounded-full border border-white/16 bg-white/8 shadow-[0_22px_56px_rgba(0,0,0,0.34)] backdrop-blur-[2px] overflow-hidden">
               <div className="flex h-[82%] w-[82%] items-center justify-center rounded-full border border-white/14 bg-black/10 overflow-hidden">
                 <img
