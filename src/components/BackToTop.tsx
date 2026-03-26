@@ -39,9 +39,6 @@ export function BackToTop() {
   const dashOffset = CIRC - (pct / 100) * CIRC;
   const nearEnd    = pct >= 80;
 
-  /* Disc offset so it sits dead-centre inside BTN×BTN */
-  const discOffset = (BTN - DISC) / 2; // = 6 px
-
   return (
     <AnimatePresence>
       {visible && (
@@ -55,7 +52,7 @@ export function BackToTop() {
         >
           <motion.button
             onClick={scrollToTop}
-            className="group relative focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-full"
+            className="group relative flex items-center justify-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             style={{ width: BTN, height: BTN }}
             whileHover={{ scale: 1.10 }}
             whileTap  ={{ scale: 0.90 }}
@@ -121,12 +118,12 @@ export function BackToTop() {
               style={{
                 width:  DISC,
                 height: DISC,
-                top:    discOffset,
-                left:   discOffset,
+                inset: 0,
+                margin: "auto",
               }}
             >
               <ArrowUp
-                className={`w-4 h-4 transition-colors duration-200 ${
+                className={`h-[18px] w-[18px] transition-colors duration-200 ${
                   nearEnd
                     ? "text-secondary-foreground"
                     : "text-primary group-hover:text-primary-foreground"
