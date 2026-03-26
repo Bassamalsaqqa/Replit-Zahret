@@ -285,6 +285,7 @@ export default function GetInvolved() {
   const [, setLocation] = useLocation();
   const isRtl = language === "ar";
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
+  const partnershipSectionImage = `${import.meta.env.BASE_URL}images/get-involved/partnership/partnership-section.jpg`;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -628,7 +629,7 @@ export default function GetInvolved() {
             >
               <div className="rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl group">
                 <img
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80"
+                  src={partnershipSectionImage}
                   alt={t("شراكة", "Partnership")}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
